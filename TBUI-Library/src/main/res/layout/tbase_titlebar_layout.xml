@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                tools:background="#adc"
+                style="@style/tbase_titleBar_rootlayout"
+    >
+
+    <RadioButton
+        tools:background="#ff0000"
+        android:id="@+id/tbase_titleLayout_left"
+        android:layout_alignParentLeft="true"
+        style="@style/tbase_titleBar_side_btn"
+        android:layout_centerVertical="true"
+        tools:text="右边按钮右边按钮"/>
+
+    <RadioButton
+        android:id="@+id/tbase_titleLayout_center"
+        style="@style/tbase_titleBar_center_btn"
+        android:layout_centerInParent="true"
+        tools:background="#ff0000"
+        tools:text="中间啊实打实三阿斯灌灌灌灌asdasd顿萨达飒飒的大殿" />
+
+    <RadioButton
+        tools:background="#ff0000"
+        android:id="@+id/tbase_titleLayout_right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        style="@style/tbase_titleBar_side_btn"
+        tools:text="右边按钮右边按钮"
+        />
+</RelativeLayout>
+

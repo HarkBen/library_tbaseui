@@ -1,0 +1,25 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode  rootProject.versionCode
+        versionName  rootProject.versionName
+
+    }
+
+    compileOptions {
+        targetCompatibility rootProject.target_Compatibility
+        sourceCompatibility rootProject.source_Compatibility
+    }
+
+}
+
+dependencies {
+
+    testImplementation 'junit:junit:4.12'
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"
+    implementation 'com.liulishuo.filedownloader:library:1.5.6'
+    implementation 'com.mani:ThinDownloadManager:1.2.5'
+}
