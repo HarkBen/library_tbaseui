@@ -1,5 +1,4 @@
-# 基础库 [![](https://www.jitpack.io/v/HarkBen/library_http.svg)](https://www.jitpack.io/#HarkBen/library_http)
-
+# 基础库 [![](https://jitpack.io/v/HarkBen/library_tbaseui.svg)](https://jitpack.io/#HarkBen/library_tbaseui)
 # TBUI-Library 基础UI
 
 1.项目根目录 build.gradle 添加
@@ -15,12 +14,7 @@ allprojects {
 2.module目录 build.gradle 添加
 
 ```
-implementation 'com.github.HarkBen:library_http:vT1.0'
+implementation 'com.github.HarkBen:library_tbaseui:0.9'
 ```
 
-混淆
-
-```
-
-```
 

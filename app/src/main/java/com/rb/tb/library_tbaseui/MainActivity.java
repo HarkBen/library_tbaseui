@@ -1,13 +1,14 @@
 package com.rb.tb.library_tbaseui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.rg.ui.baseactivity.TBaseActivity;
+
+public class MainActivity extends TBaseActivity {
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void onLayoutLoaded(Bundle bundle) {
+        setContentLayout(R.layout.activity_main);
     }
 }
