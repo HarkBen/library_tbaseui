@@ -33,7 +33,7 @@ public abstract class TBaseFragment extends Fragment implements View.OnClickList
     @Nullable
     @Override
     public View onCreateView (LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        rootView = LayoutInflater.from(getTBaseActivity()).inflate(R.layout.tbase_fragment_layout, null);
+        rootView = LayoutInflater.from(getActivity()).inflate(R.layout.tbase_fragment_layout, null);
         contentView = rootView.findViewById(R.id.tbase_fragment_childContentLayout);
         onInitLayout(inflater, container, savedInstanceState);
         return rootView;
@@ -62,33 +62,6 @@ public abstract class TBaseFragment extends Fragment implements View.OnClickList
             view.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
             contentView.addView(view);
         }
-    }
-
-
-    //防止重复引用同一个Activity  Fragment重叠
-    @Override
-    public void onAttach (Activity activity) {
-        if (activity instanceof TBaseActivity) {
-
-        } else {
-            try {
-                throw new NotFindTBaseActivityException();
-            } catch (NotFindTBaseActivityException e) {
-                e.printStackTrace();
-            }
-        }
-        super.onAttach(activity);
-    }
-
-    @NonNull
-    public TBaseActivity getTBaseActivity () {
-        Activity activity = getActivity();
-        if (activity instanceof TBaseActivity) {
-            return (TBaseActivity) activity;
-        } else {
-            throw new ClassCastException("this Activity can't not cast to TBaseActivity!");
-        }
-
     }
 
     @Override
