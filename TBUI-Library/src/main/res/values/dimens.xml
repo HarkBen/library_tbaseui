@@ -5,8 +5,7 @@
 
     <!-- 统一的状态栏高度-->
     <dimen name="tbase_stuatusBar_height">18dp</dimen>
-    <dimen name="tbase_titleBarLayout_height">40dp</dimen>
-    <dimen name="tbase_titleBarLayout_height_nostatusBar">58dp</dimen>
+    <dimen name="tbase_titleBarLayout_height_nostatusBar">45dp</dimen>
 
     <dimen name="tbase_titleBar_center_title_size">20sp</dimen>
     <dimen name="tbase_titleBar_left_title_size">12sp</dimen>

@@ -24,21 +24,21 @@
     </style>
 
 
-<style name="tbase_titleBar_side_btn">
-    <item name="android:layout_width">wrap_content</item>
-    <item name="android:layout_height">wrap_content</item>
-    <item name="android:button">@null</item>
-    <item name="android:ellipsize">end</item>
-    <item name="android:gravity">center</item>
-    <item name="android:maxHeight">45dp</item>
-    <item name="android:maxLength">8</item>
-    <item name="android:maxLines">2</item>
-    <item name="android:maxWidth">50dp</item>
-    <item name="android:minWidth">40dp</item>
-    <item name="android:textColor">@color/tbase_titlebar_center_txt</item>
-    <item name="android:textSize">12sp</item>
+    <style name="tbase_titleBar_side_btn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:maxHeight">45dp</item>
+        <item name="android:maxLength">8</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:maxWidth">50dp</item>
+        <item name="android:minWidth">40dp</item>
+        <item name="android:textColor">@color/tbase_titlebar_center_txt</item>
+        <item name="android:textSize">12sp</item>
 
-</style>
+    </style>
     <style name="tbase_titleBar_center_btn">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -58,15 +58,7 @@
         <item name="android:layout_height">@dimen/tbase_titleBarLayout_height_nostatusBar</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingTop">@dimen/tbase_stuatusBar_height</item>
         <item name="android:paddingLeft">10dp</item>
     </style>
-    <style name="tbase_titleBar_rootlayout_nostatusBar">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/tbase_titleBarLayout_height_nostatusBar</item>
-        <item name="android:gravity">center_vertical</item>
-        <item name="android:paddingBottom">3dp</item>
-        <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingLeft">10dp</item>
-    </style>
+
 </resources>
