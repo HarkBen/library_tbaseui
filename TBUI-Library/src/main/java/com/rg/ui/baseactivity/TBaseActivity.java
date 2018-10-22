@@ -31,7 +31,7 @@ import com.rg.function.customview.swipebaklayout.SwipeBackActivity;
  * loadBaseTitleBar
  * author zhusw 2016-06-16 13:43:31
  */
-public abstract class TBaseActivity extends SwipeBackActivity implements View.OnClickListener{
+public abstract class TBaseActivity extends SwipeBackActivity implements View.OnClickListener {
     /**
      * rootLayout
      */
@@ -50,11 +50,12 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
     private boolean isAddStatus;
 
     @CallSuper
-    public void beforeOnCreate(){
+    public void beforeOnCreate() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         //设置状态栏透明
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         beforeOnCreate();
@@ -80,6 +81,7 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
         getSwipeBackLayout().setEnableGesture(openSwipeBack());
 
     }
+
     @Override
     public void onClick(View view) {
 
@@ -94,15 +96,15 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
     private void initRootLayout() {
         View view = LayoutInflater.from(this).inflate(R.layout.tbase_activity_layout, null);
         rootLayout = view.findViewById(R.id.tbase_activity_rootlayout);
-        childContentLayout =  view.findViewById(
+        childContentLayout = view.findViewById(
                 R.id.tbase_activity_childContentLayout);
-        titleBar =  view.findViewById(R.id.tbase_activity_titleBar);
+        titleBar = view.findViewById(R.id.tbase_activity_titleBar);
         setContentView(rootLayout);
     }
 
 
     @Nullable
-    public  TBaseTitleBar getTitleBar() {
+    public TBaseTitleBar getTitleBar() {
         if (null != titleBar) {
             return titleBar;
         } else {
@@ -126,6 +128,7 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
             reSetStatusColor(getResources().getColor(id));
         }
     }
+
     protected final void reSetStatusColor(@ColorInt int id) {
         if (isAddStatus) {
             rootLayout.getChildAt(0).setBackgroundColor(id);
@@ -189,6 +192,9 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
                 statusBarHeight);
         statusView.setLayoutParams(params);
         statusView.setBackgroundColor(color);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            statusView.setElevation(getResources().getDimension(R.dimen.tbase_stuatusBar_elevation));
+        }
         return statusView;
     }
 
@@ -210,13 +216,14 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
      * 设置当前打开的Activity的布局
      */
     public final void setContentLayout(View layoutView) {
-        if(childContentLayout.getChildCount()>0){
+        if (childContentLayout.getChildCount() > 0) {
             childContentLayout.removeAllViews();
         }
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        childContentLayout.addView(layoutView,childContentLayout.getChildCount(),params);
+        childContentLayout.addView(layoutView, childContentLayout.getChildCount(), params);
     }
-    public final void setContentLayout(@LayoutRes int layoutId){
+
+    public final void setContentLayout(@LayoutRes int layoutId) {
         View view = LayoutInflater.from(this).inflate(layoutId, null);
         setContentLayout(view);
     }
