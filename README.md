@@ -14,7 +14,7 @@ allprojects {
 2.module目录 build.gradle 添加
 
 ```
-implementation 'com.github.HarkBen:library_tbaseui:1.3'
+implementation 'com.github.HarkBen:library_tbaseui:1.2'
 ```
 
 

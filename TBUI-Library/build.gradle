@@ -19,9 +19,7 @@ android {
 dependencies {
 
     testImplementation 'junit:junit:4.12'
-    implementation ("com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"){
-        exclude group:'com.android.support'
-    }
+    implementation "com.android.support:appcompat-v7:${rootProject.supportLibraryVersion}"
     implementation 'com.liulishuo.filedownloader:library:1.5.6'
     implementation 'com.mani:ThinDownloadManager:1.2.5'
 }
