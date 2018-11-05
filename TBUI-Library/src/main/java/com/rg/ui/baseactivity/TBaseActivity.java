@@ -49,7 +49,7 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
      */
     private boolean isAddStatus;
 
-    @CallSuper
+
     public void beforeOnCreate() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         //设置状态栏透明
@@ -71,11 +71,8 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
     }
 
     private void initSystemSet() {
-        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
         //是否添加过 statusBar 默认为 false
         isAddStatus = false;
-        //设置状态栏透明
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         //初始化侧滑范围
         getSwipeBackLayout().setEdgeSize(40);
         getSwipeBackLayout().setEnableGesture(openSwipeBack());
