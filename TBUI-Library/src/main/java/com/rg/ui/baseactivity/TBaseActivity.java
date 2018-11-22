@@ -52,7 +52,7 @@ public abstract class TBaseActivity extends SwipeBackActivity implements View.On
 
     public void beforeOnCreate() {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
-        //设置状态栏透明
+        //设置状态栏透明 布局将从屏幕顶端开始
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
     }
 

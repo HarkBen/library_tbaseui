@@ -49,6 +49,10 @@ public abstract class TBaseFragment extends Fragment implements View.OnClickList
     public abstract void onInitLayout (LayoutInflater inflater, ViewGroup container,
                                        Bundle savedInstanceState);
 
+    public LinearLayout getContentView() {
+        return contentView;
+    }
+
     /**
      * 设置子类布局
      *
