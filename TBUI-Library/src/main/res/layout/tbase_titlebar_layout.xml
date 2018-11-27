@@ -11,7 +11,7 @@
         android:layout_alignParentLeft="true"
         style="@style/tbase_titleBar_side_btn"
         android:layout_centerVertical="true"
-        tools:text="右边按钮右边按钮"/>
+        tools:text="右边按钮"/>
 
     <RadioButton
         android:id="@+id/tbase_titleLayout_center"
@@ -26,7 +26,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         style="@style/tbase_titleBar_side_btn"
-        tools:text="右边按钮右边按钮"
+        tools:text="右边按钮"
         />
 </RelativeLayout>
 
