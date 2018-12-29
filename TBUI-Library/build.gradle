@@ -9,11 +9,6 @@ android {
 
     }
 
-    compileOptions {
-        targetCompatibility rootProject.target_Compatibility
-        sourceCompatibility rootProject.source_Compatibility
-    }
-
 }
 
 dependencies {

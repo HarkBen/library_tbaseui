@@ -10,5 +10,7 @@ public class MainActivity extends TBaseActivity {
     @Override
     public void onLayoutLoaded(Bundle bundle) {
         setContentLayout(R.layout.activity_main);
+        addSetStatus(getResources().getColor(R.color.colorPrimaryDark));
+        getTitleBar().setBackgroundResource(R.color.colorAccent);
     }
 }
