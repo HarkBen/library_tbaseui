@@ -38,7 +38,25 @@ public class ActivityStackManager {
         return INSTANCE;
     }
 
-
+    /**
+     * @param targetName 带包名
+     * @return
+     */
+    public FragmentActivity findActivity(String targetName){
+        FragmentActivity result = null;
+            Iterator<FragmentActivity> interator = stack.iterator();
+            while (interator.hasNext()) {
+                FragmentActivity act = interator.next();
+                if (null != act) {
+                    if (targetName.equals(act.getClass().getName())) {
+                        result = act;
+                        break;
+                    }
+                }
+        }
+        return result;
+    }
+    
     public void push (FragmentActivity activity) {
         //加到栈顶
         stack.push(activity);
